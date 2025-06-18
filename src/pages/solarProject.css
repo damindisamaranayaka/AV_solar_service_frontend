@@ -18,6 +18,11 @@
 .text1 {
   color: rgb(167, 241, 225);
 }
+.text1,
+.text2,
+.text3 {
+  cursor: pointer;
+}
 
 .solarProject h2 {
   font-size: 25px;

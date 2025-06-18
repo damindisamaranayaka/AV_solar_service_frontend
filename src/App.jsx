@@ -19,6 +19,8 @@ import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import Superadmins from "./pages/SuperAdmins.jsx";
 import Customer from "./pages/customer.jsx";
 import NewProjectExistingCustomer from "./pages/newProjectExistingCustomer.jsx";
+import OngridSolarProject from "./pages/ongridsolarproject.jsx";
+import OffgridSolarProject from "./pages/offgridsolarproject.jsx";
 function App() {
   return (
     <Router>
@@ -37,6 +39,22 @@ function App() {
           element={
             <ProtectedRoute>
               <SolarProject />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/ongridsolarproject"
+          element={
+            <ProtectedRoute>
+              <OngridSolarProject />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/offgridsolarproject"
+          element={
+            <ProtectedRoute>
+              <OffgridSolarProject />
             </ProtectedRoute>
           }
         />
