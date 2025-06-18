@@ -9,13 +9,14 @@ const NewProjectExistingCustomer = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [error, setError] = useState("");
 
-  // Individual form fields (same as Add New Customer)
+  const [customerId, setCustomerId] = useState(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
 
   const navigate = useNavigate();
+
   const handleSearch = async () => {
     try {
       const response = await axios.get(
@@ -28,12 +29,14 @@ const NewProjectExistingCustomer = () => {
       );
 
       const data = response.data;
+      setCustomerId(data.id || null);
       setName(data.name || "");
       setEmail(data.email || "");
       setAddress(data.address || "");
       setPhone(data.telephone || "");
       setError("");
     } catch (err) {
+      setCustomerId(null);
       setName("");
       setEmail("");
       setAddress("");
@@ -43,10 +46,16 @@ const NewProjectExistingCustomer = () => {
   };
 
   const handleContinue = () => {
-    if (name && email) {
-      navigate("/new-project-details", {
+    if (customerId && name && email) {
+      navigate("/newprojectdetails", {
         state: {
-          customer: { name, email, address, telephone: phone },
+          customer: {
+            id: customerId,
+            name,
+            email,
+            address,
+            telephone: phone,
+          },
         },
       });
     } else {
@@ -69,7 +78,6 @@ const NewProjectExistingCustomer = () => {
               placeholder="Search the customer"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              // Add search functionality later
             />
             <button onClick={handleSearch} className="btn">
               Find
@@ -109,6 +117,8 @@ const NewProjectExistingCustomer = () => {
               onChange={(e) => setPhone(e.target.value)}
             />
           </div>
+
+          {error && <p style={{ color: "red" }}>{error}</p>}
 
           <button onClick={handleContinue} className="btn">
             Continue
