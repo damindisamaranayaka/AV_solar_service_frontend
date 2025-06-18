@@ -1,0 +1,89 @@
+.modal-backdrop3 {
+  position: absolute;
+  top: 90px;
+  right: 10px;
+  width: 350px;
+  height: 50px; 
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content3 {
+  background: white;
+  position: relative;
+  padding: 20px;
+  border-radius: 20px;
+  width: 250px;
+  height: 90px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn3 {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+}
+
+.combined{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 80%;
+    color: black;
+    font-weight: 600;
+    padding: 4px;
+    position:absolute;
+    top:10px;
+}
+
+.new, .exit{
+    cursor: pointer;
+}
+
+.line{
+  width: 80%;
+  border: none;
+  border-top: 2px solid black;
+  margin: 10px 0
+}
+
+
+@media screen and (max-width: 768px) {
+  .modal-backdrop3 {
+    position: absolute;
+  width: 350px;
+  height: 50px; 
+  position:absolute;
+  top: 60px;
+    height: auto;
+  }
+
+  .modal-content3 {
+  width: 150px;
+  height: 100px;
+    padding: 15px;
+      border-radius: 20px;
+  }
+
+  .combined {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .new, .exit {
+    font-size:0.7rem;
+    padding: 4px;
+  }
+  .line{
+    width:50%;
+  }
+
+  .close-btn3 {
+    font-size: 20px;
+  }
+}

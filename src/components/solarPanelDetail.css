@@ -1,0 +1,136 @@
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 740px;
+  height:400px;
+  max-width: 800px;
+  max-height: 70vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.table11 {
+  width: 100%;
+  color: black;
+  border-collapse: collapse;
+  margin-top: 5px;
+  margin-bottom:5px;
+  overflow-x: auto;
+}
+
+/* Add border and padding to cells */
+.table11 th,
+.table11 td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  word-break: break-word;
+}
+
+.capacity{
+  font-size:1rem;
+}
+
+/* Responsive table wrapper for small screens */
+@media (max-width: 800px) {
+  .modal-content {
+    padding: 18px;
+  }
+  .table11 {
+    display: block;
+    overflow-x: auto;
+  }
+   .table11 th,
+  .table11 td {
+    font-size: 16px;
+    padding: 9px;
+  }
+}
+
+/* Button wrapper aligns button to right */
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Button styling */
+.button {
+  background-color: #00a68b;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #007b6b;
+}
+
+/* Text responsiveness */
+h2, p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 16px;
+  }
+
+  .button {
+    width: 25%;
+    justify-content: center;
+  }
+
+  .button-wrapper {
+    justify-content: center;
+  }
+
+  .table11 th,
+  .table11 td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .close-btn {
+    font-size: 20px;
+  }
+}

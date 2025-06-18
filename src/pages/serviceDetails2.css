@@ -1,0 +1,139 @@
+.service-container {
+  padding: 40px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tables{
+    position:absolute;
+    left:180px;
+    top:220px;
+    display:flex;
+    flex-direction:column;
+    gap:0px;
+    padding: 0 10%;
+}
+
+.topic-container {
+  position:relative;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.topic {
+  position:absolute;
+  left:400px;
+  bottom:0px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a1a1a;
+  display: block;
+  text-align: left;
+  padding-bottom: 5px;
+  font-weight:bold;
+}
+
+table {
+  width: 1000px;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+td,th {
+  padding: 10px;
+  width: 500px;
+  text-align:center;
+  border: 1px solid #ddd;
+  vertical-align: top;
+}
+
+
+.table1, .table2 {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imageIcon2{
+position: absolute;
+top: 110px;
+right: 90px;
+background-color: rgb(22, 183, 148);
+border-radius:12px;
+padding:3px 5px 2px 5px;
+color:white;
+}
+
+
+@media (max-width: 768px) {
+  .service-container {
+    padding: 20px;
+  }
+
+  .tables {
+    position: static;
+    left: unset;
+    top: unset;
+    padding: 0 2%;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .topic-container {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .topic {
+    position: static;
+    left: unset;
+    bottom: unset;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 8px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 14px;
+    display: block;
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+
+  td {
+    width: auto;
+    padding: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .table1, .table2 {
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+
+  .imageIcon2 {
+    position: static;
+    margin-top: 10px;
+    //align-self: flex-end;
+    right: unset;
+    top: unset;
+  }
+}
+
+@media (max-width: 425px) {
+  .imageIcon2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    position: static;
+    float: none;
+  }
+}
+

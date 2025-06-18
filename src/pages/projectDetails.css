@@ -1,0 +1,178 @@
+.project-wrapper {
+    position:absolute;
+    top: 15%; 
+    margin-left: 5%;
+}
+
+.project-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+.project-sections {
+  display: flex;
+  flex-direction:row;
+  //flex-wrap: wrap;
+  gap: 20px;
+}
+
+.customer_service{
+   display:flex;
+   flex-direction:column;
+   gap:20px;
+}
+
+.customer-details {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  flex: 1;
+  min-width: 600px;
+  height: 400px;
+}
+
+.service-summery {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  flex: 1;
+  min-width: 600px;
+  height: 100px;
+ 
+}
+
+.project-details {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  flex: 1;
+  min-width: 600px;
+}
+
+.service-summery {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  flex: 1;
+  min-width: 350px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.icon1 {
+  border-radius: 100%;
+  background-color: #00a68b;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.card-content label {
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.grp{
+  display:flex;
+  flex-direction:row;
+  gap:150px;
+}
+.grp11{
+  display:flex;
+  flex-direction:column
+}
+
+.grp11 input {
+  width: 70%;
+  margin-right: 4%;
+}
+
+.grp input:last-child {
+  margin-right: 0;
+}
+
+.card-content input {
+  width: 90%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+
+
+.button-group {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #00a68b;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #008f76;
+}
+
+.service-rounds {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  background-color: #d5f7e9;
+  padding: 10px 15px;
+  border-radius: 10px;
+  min-width: 140px;
+  text-align: center;
+}
+
+.service-box p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.service-box span {
+  font-size: 14px;
+  color: #555;
+}
+
+@media only screen and (max-width: 768px) {
+.project-sections {
+  display: flex;
+  flex-direction:column;
+  //flex-wrap: wrap;
+  gap: 20%;
+}
+}
+
+

@@ -1,0 +1,79 @@
+.main-content {
+  position: absolute;
+  top: 80px; 
+  margin-left: 80px; 
+   
+}
+
+.dashboard {
+  margin-bottom: 20px;
+}
+.dashboardtitle{
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+     margin-top: 20px;
+    margin-left: 0px;
+}
+
+.boxes{
+    margin-left: 80px ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.box1 {
+  width: 250px;
+  height: 70px;
+  padding: 20px;
+  margin: 10px;
+  line-height: 0.8;
+  font-weight: 650;
+  color:black;
+  border: 2px solid #ccc; 
+  border-radius: 20px;     
+  background-color:rgb(234, 231, 231); 
+  text-align: center;
+  align-items: center;
+
+}
+
+.box1 p{
+  font-size:1.25rem;
+  margin-bottom:0.5rem;
+}
+
+
+/* Responsive styles for tablets and phones */
+@media screen and (max-width: 768px) {
+  .main-content {
+    position: static;
+    margin-left: 0;
+    padding: 1rem;
+  }
+  .dashboardtitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+  .boxes {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+.box1 p{
+  font-size:1rem;
+  margin-bottom:0.5rem;
+}
+  .box1 {
+    width: 90%;
+    height: auto;
+    margin: 10px 0;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
