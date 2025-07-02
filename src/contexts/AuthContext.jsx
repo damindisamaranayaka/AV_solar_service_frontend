@@ -1,16 +1,25 @@
+
 // src/contexts/AuthContext.jsx
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
+
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [auth, setAuth] = useState({ user: null, token: null });
+  const [auth, setAuth] = useState({ 
+    user: JSON.parse(localStorage.getItem("user")) || null,
+    token: localStorage.getItem("token") || null
+  });
 
   const login = (userData, token) => {
+    localStorage.setItem("user", JSON.stringify(userData));
+    localStorage.setItem("token", token);
     setAuth({ user: userData, token });
   };
 
   const logout = () => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
     setAuth({ user: null, token: null });
   };
 
@@ -21,9 +30,9 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-export const useAuth = () => useContext(AuthContext);
+export const useAuth = () => useContext(AuthContext); 
 
-// // src/contexts/AuthContext.jsx
+//  // src/contexts/AuthContext.jsx
 // import { createContext, useContext, useEffect, useState } from "react";
 // import axios from "axios";
 

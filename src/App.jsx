@@ -107,7 +107,7 @@ function App() {
           }
         />
         <Route
-          path="/completedservices"
+          path="/completedservices/:project_id"
           element={
             <ProtectedRoute>
               <CompletedServices />

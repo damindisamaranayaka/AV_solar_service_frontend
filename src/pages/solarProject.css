@@ -59,7 +59,7 @@
 }
 
 .plus {
-  fontsize: large;
+  font-size: large;
   color: #16b794;
   border-radius: 8px;
   padding: 8px;
@@ -121,7 +121,7 @@
   color: white;
   padding: 0x 1px 0px 1px;
   background-color: black;
-  //align-items: center;
+  align-items: center;
   transform: rotate(180deg);
 }
 
